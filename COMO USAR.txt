@@ -1,0 +1,6 @@
+selecione todos os procX.bar (no meu computador só foi possivel rodar paralelo 15 processos)
+e aperte enter para todos rodarem paralelos
+logo em seguida irá aparecer um arquivo txt para cada processo com cada mensagem recebida
+caso nao apareça é pq o servidor daquele processo nao conseguiu capturar nenhuma mensagem 
+Foi diminuido para 50 iteraçoes, pois demorava muito para exibir os resultados
+Caso necessario so trocar na lina 97 na classe App.java
