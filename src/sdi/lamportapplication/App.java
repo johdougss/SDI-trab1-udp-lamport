@@ -96,12 +96,16 @@ public class App {
         StringBuilder str;
         for (int i = 0; i < 50; i++)
             for (int portServer = 5000; portServer < 5018; portServer++) {
-                if (port == portServer)
+                if (port == portServer || aletorio())
                     continue;
                 str = new StringBuilder();
                 str.append("\tProc:").append(idproc).append("\tMSG:").append(msg).append("-").append(i);
                 udpclient.send(str.toString(), portServer);
                 System.out.println("[CLIENT] Li[" + udpclient.getLamportLi() + "]\tSEND: ServidorPort:" + portServer + " Conteudo:" + str.toString());
             }
+    }
+
+    private boolean aletorio() {
+        return (1 + (int) (Math.random() * 2)) % 2 == 0;
     }
 }
