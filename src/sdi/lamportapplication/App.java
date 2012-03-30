@@ -48,7 +48,7 @@ public class App {
             public void run() {
                 UDPLamport udpserver = new UDPLamport(port, lamport);
                 udpserver.setTimeOut(500);
-                System.out.println("INICIO SERVER");
+                System.out.println("[SERVER] INICIO");
                 try {
                     while (true) {
                         String msg = udpserver.receive();
@@ -59,6 +59,7 @@ public class App {
                     System.out.println("[SERVER] TIMEOUT");
                 }
                 print(messages);
+                System.out.println("[SERVER] FIM");
             }
 
             private void print(Map<Integer, String> messages) {
@@ -79,10 +80,8 @@ public class App {
             }
 
             private void printArquivo(String txt, int idproc) {
-                try {
-                    FileWriter x = new FileWriter("proc[" + idproc + "].txt");
+                try (FileWriter x = new FileWriter("proc[" + idproc + "].txt")) {
                     x.write(txt);
-                    x.close();
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -91,7 +90,7 @@ public class App {
     }
 
     private void runClint(String msg, int idproc, int port) {
-        System.out.println("INICIO CLIENT");
+        System.out.println("[CLIENT] INICIO");
         UDPLamport udpclient = new UDPLamport(lamport);
         StringBuilder str;
         for (int i = 0; i < 50; i++)
@@ -101,8 +100,9 @@ public class App {
                 str = new StringBuilder();
                 str.append("\tProc:").append(idproc).append("\tMSG:").append(msg).append("-").append(i);
                 udpclient.send(str.toString(), portServer);
-                System.out.println("[CLIENT] Li[" + udpclient.getLamportLi() + "]\tSEND: ServidorPort:" + portServer + " Conteudo:" + str.toString());
+                System.out.println("[CLIENT] Li[" + udpclient.getLamportLi() + "]  \tSEND: ServidorPort:" + portServer + " Conteudo:" + str.toString());
             }
+        System.out.println("[CLIENT] FIM");
     }
 
     private boolean aletorio() {
