@@ -1,42 +1,42 @@
-Trabalho 1:
-ImplementaÁ„o da SimulaÁ„o da OrdenaÁ„o de Eventos atravÈs de
-RelÛgios LÛgicos de Lamport usando ComunicaÁ„o Inter-Processos
+ÔªøTrabalho 1:
+Implementa√ß√£o da Simula√ß√£o da Ordena√ß√£o de Eventos atrav√©s de
+Rel√≥gios L√≥gicos de Lamport usando Comunica√ß√£o Inter-Processos
 por Troca de Mensagens
 Prof. Adriano Fiorese
 ------------------
 
 
-1. CaracterizaÁ„o do ServiÁo
-O serviÁo a ser desenvolvido trata-se de uma simulaÁ„o de ordenaÁ„o de eventos usando relÛgio lÛgico de
-Lamport [GC05]. Cada equipe (de no maximo 3) de estudantes devera simular a comunicac~ao entre n processos
-onde n È o numero de caracteres de seu nome. Por exemplo: equipe JosÈ, Jo„o, Maria = 13 processos, pois s„o
-13 caracteres o somatÛrio de caracteres do primeiro nome de todos os integrantes da equipe.
-Ao final de 500 iteraÁıes (for) cada processo deveria apresentar a sequÍncia de mensagens recebidas de forma
+1. Caracteriza√ß√£o do Servi√ßo
+O servi√ßo a ser desenvolvido trata-se de uma simula√ß√£o de ordena√ß√£o de eventos usando rel√≥gio l√≥gico de
+Lamport [GC05]. Cada equipe (de no m√°ximo 3) de estudantes dever√° simular a comunica√ß√£o entre n processos
+onde n √© o numero de caracteres de seu nome. Por exemplo: equipe Jos√©, Jo√£o, Maria = 13 processos, pois s√£o
+13 caracteres o somat√≥rio de caracteres do primeiro nome de todos os integrantes da equipe.
+Ao final de 500 itera√ß√µes (for) cada processo deveria apresentar a sequ√™ncia de mensagens recebidas de forma
 ordenada.
-Os eventos em quest„o que devem ser ordenados atravÈs de relÛgios lÛgicos de Lamport s„o o envio e
-recepÁ„o de mensagens trocadas entre processos. Cada mensagem enviada deve enviar ao menos a identicaÁ„o 
-do processo que a emitiu. O envio das mensagens em cada processo deve seguir uma caracterÌstica aleatÛria
-(nem toda interaÁ„o deve enviar mensagem). Toda mensagem produzida deve ser enviada a todos os outros
+Os eventos em quest√£o que devem ser ordenados atrav√©s de rel√≥gios l√≥gicos de Lamport s√£o o envio e
+recep√ß√£o de mensagens trocadas entre processos. Cada mensagem enviada deve enviar ao menos a identica√ß√£o 
+do processo que a emitiu. O envio das mensagens em cada processo deve seguir uma caracter√≠stica aleat√≥ria
+(nem toda intera√ß√£o deve enviar mensagem). Toda mensagem produzida deve ser enviada a todos os outros
 processos pertencentes ao grupo.
 
-2. ImplementaÁ„o
-A implementaÁ„o de tal serviÁo deveria ser realizada utilizando-se comunicaÁ„o Inter-Processos por meio da
-abstraÁ„o de passagem de mensagem UDP. O modelo arquitetural a ser utilizado deveria ser o cliente/servidor.
+2. Implementa√ß√£o
+A implementa√ß√£o de tal servi√ßo deveria ser realizada utilizando-se comunica√ß√£o Inter-Processos por meio da
+abstra√ß√£o de passagem de mensagem UDP. O modelo arquitetural a ser utilizado deveria ser o cliente/servidor.
 Cada processo atuaria tanto como cliente quanto como servidor; ou seja, deveria estar apto a enviar e receber
-novas mensagens. Como dica, caso desenvolvam os processos para executarem em apenas uma m·quina (caso
+novas mensagens. Como dica, caso desenvolvam os processos para executarem em apenas uma m√°quina (caso
 de teste) utilizem scripts para inicializar todos os processos. Por exemplo, um arquivo .bat que inicialize os
-n processos com os argumentos adequados de forma que o trabalho de programaÁ„o consista em desenvolver
+n processos com os argumentos adequados de forma que o trabalho de programa√ß√£o consista em desenvolver
 apenas um processo.
 
 3. Prazos
-Entrega (via e-mail)dos execut·veis, do cÛdigo fonte do cliente e servidor devera ser dia 27/03/2012.
+Entrega (via e-mail)dos execut√°veis, do c√≥digo fonte do cliente e servidor dever√° ser dia 27/03/2012.
 
 
 ----------------------------------------------------
 - Utilizado JAVA 7
 
 Selecione todos os arquivos .bat dentro da pasta bat(consegui rodar apenas 15 simultaneos) e aperte enter.
-Ir„o aparecer um arquivo pro[X].txt para cada processo com uma lista de todas as mensagens recebidas.
-logo em seguida ir· aparecer um arquivo txt para cada processo com cada mensagem recebida
+Ir√£o aparecer um arquivo pro[X].txt para cada processo com uma lista de todas as mensagens recebidas.
+logo em seguida ir√° aparecer um arquivo txt para cada processo com cada mensagem recebida
 
 -obs: foram diminuido as iteracoes para 50.
