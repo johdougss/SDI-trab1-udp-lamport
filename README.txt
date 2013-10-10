@@ -39,4 +39,4 @@ Selecione todos os arquivos .bat dentro da pasta bat(consegui rodar 15 simultane
 Irá aparecer um arquivo pro[X].txt para cada processo com uma lista de todas as mensagens recebidas.
 logo em seguida irá aparecer um arquivo txt para cada processo com cada mensagem recebida
 
--obs: foram diminuido as iteracoes para 50.
+-obs: foi diminuido as iteracoes para 50.
